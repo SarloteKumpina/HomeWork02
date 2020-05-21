@@ -1,9 +1,129 @@
-.box {
-    background-color: aquamarine;
-}
 .container {
-    background-color: blueviolet;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px 100px ;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+    "header1 header1"
+    "header2 header3"
+    "content1 content1"
+    "content2 content2" 
+    "content3 content3"
+    "advert advert"
+    "content4 content4"
+    "content5 content5";
 }
-h1 {
-    background-color: brown;
+.box {
+    background-color: chartreuse;
+    font-size: 0,8rem;
+    color: red;
+}
+
+.box:nth-child(2n +1) {
+    background-color: rgb(224, 30, 198);
+}
+
+.box1 {
+    grid-area: header1;
+}
+
+.box2 {
+    grid-area: header2;
+}
+
+.box3 {
+    grid-area: header3;
+}
+
+.box4 {
+    grid-area: content1;
+}
+
+.box5 {
+    grid-area: content2;
+}
+
+.box6{
+    grid-area: advert;
+}
+.box7{
+    grid-area: advert;
+}
+
+.box8{
+    grid-area: content3;
+}
+
+.box9{
+    grid-area: content4;
+}
+
+.box10{
+    grid-area: content3;
+}
+
+@media screen and (min-width: 576px) {
+    .container {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 200px 200px 200px 200px 200px 200px 100px ;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas:
+    "header1 header2 header3"
+    "content1 content1 content1"
+    "content2 content2 content2" 
+    "content3 content3 advert"
+    "content4 content4 content4" 
+    "content5 content5 content5";
+}
+.box {
+    background-color: rgb(70, 41, 104);
+    font-size: 1,5rem;
+    color: rgb(24, 209, 70);
+}
+
+.box:nth-child(2n +1) {
+    background-color: rgb(209, 141, 15);
+}
+
+.box1 {
+    grid-area: header1;
+}
+
+.box2 {
+    grid-area: header2;
+}
+
+.box3 {
+    grid-area: header3;
+}
+
+.box4 {
+    grid-area: content1;
+}
+
+.box5 {
+    grid-area: content2;
+}
+
+.box6{
+    grid-area: advert;
+}
+.box7{
+    grid-area: advert;
+}
+
+.box8{
+    grid-area: content3;
+}
+
+.box9{
+    grid-area: content4;
+}
+
+.box10{
+    grid-area: content3;
+}
 }
