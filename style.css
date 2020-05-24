@@ -1,25 +1,33 @@
 .container {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    grid-template-rows: 50px 60px 50px 80px 80px 160px;
+    grid-template-rows: 5fr 6fr;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
     grid-template-areas:
     "header1 header1"
-    "header2 header3"
+    "header2 header3";
+    margin-bottom: 5px;
+    text-align: center;
+}
+.container1 {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 5fr 8fr 8fr 16fr;
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+    grid-template-areas:
     "content2 content2" 
     "content3 content3"
     "advert advert"
     "content4 content4";
-}
-.box {
-    background-color: chartreuse;
-    font-size: 1rem;
-    color: rgb(15, 14, 14);
+    text-align: justify;
 }
 
-.box:nth-child(2n +1) {
-    background-color: rgb(224, 30, 198);
+.box {
+    background-color: #4d6187;
+    color: #c5d8ff;
+    padding: 5px 5px 5px 5px;    
 }
 
 .box1 {
@@ -44,21 +52,18 @@
 
 .box6{
     grid-area: advert;
+    justify-content: space-evenly;
 }
-/* .box7{
-    grid-area: advert;
-} */
 
-
-.box8{
+.box7{
     grid-area: content3;
 }
 
-.box9{
+.box8{
     grid-area: content4;
 }
 
-.box10{
+.box9{
     grid-area: content5;
 }
 
@@ -66,70 +71,51 @@
     display: none;
 }
 
+.button {
+    background-color: #c5d8ff;
+    color: #4d6187;
+    margin-top: 5px;
+}
+.button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+}
+footer {
+    color: #4d6187;
+    font-size: 16px;
+}
+
 @media screen and (min-width: 576px) {
     .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 5fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        grid-template-areas:
+        "header1 header2 header3";
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .container1 {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-    grid-template-rows: 50px 50px 40px 150px 400px 60px ;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 5fr 4fr 15fr 40fr 6fr ;
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     grid-template-areas:
-    "header1 header2 header3"
     "content1 content1 content1"
     "content2 content2 content2" 
     "content3 content3 advert"
     "content4 content4 content4" 
     "content5 content5 content5";
+    text-align: justify;
 }
 .box {
-    background-color: rgb(70, 41, 104);
-    font-size: 2rem;
-    color: rgb(24, 209, 70);
+    font-size: 1.5rem;
+    padding: 10px 10px 10px 10px;
 }
 
-.box:nth-child(2n +1) {
-    background-color: rgb(209, 141, 15);
-}
-
-.box1 {
-    grid-area: header1;
-}
-
-.box2 {
-    grid-area: header2;
-}
-
-.box3 {
-    grid-area: header3;
-}
-
-.box4 {
-    grid-area: content1;
-}
-
-.box5 {
-    grid-area: content2;
-}
-
-.box6{
-    grid-area: advert;
-}
-/* .box7{
-    grid-area: advert;
-} */
-
-
-.box8{
-    grid-area: content3;
-}
-
-.box9{
-    grid-area: content4;
-}
-
-.box10{
-    grid-area: content5;
-}
 .hide-phone {
     display: block;
 }
@@ -137,66 +123,31 @@
 }
 @media screen and (min-width: 992px) {
     .container {
+        display: grid;
+        grid-template-columns: 3fr 1fr 5.5fr 5.5fr 5fr;
+        grid-template-rows: 1fr;
+        grid-column-gap: 15px;
+        grid-row-gap: 15px;
+        grid-template-areas:
+        "header1 header2 header2 header2 header3";
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    .container1 {
     display: grid;
     grid-template-columns: 3fr 1fr 5.5fr 5.5fr 5fr;
-    grid-template-rows: 100px 200px 400px;
+    grid-template-rows: 1.2fr 2.5fr;
     grid-column-gap: 15px;
     grid-row-gap: 15px;
     grid-template-areas:
-    "header1 header2 header2 header2 header3"
     "content1 content1 content1 content2 advert"
     "content3 content3 content4 content4 content5";
+    text-align: justify;
 }
+
 .box {
-    background-color: rgb(214, 19, 84);
     font-size: 2rem;
-    color: rgb(41, 44, 230);
+    padding: 15px 15px 15px 15px;
 }
 
-.box:nth-child(2n +1) {
-    background-color: rgb(26, 24, 22);
-}
-
-.box1 {
-    grid-area: header1;
-}
-
-.box2 {
-    grid-area: header2;
-}
-
-.box3 {
-    grid-area: header3;
-}
-
-.box4 {
-    grid-area: content1;
-}
-
-.box5 {
-    grid-area: content2;
-}
-
-.box6{
-    grid-area: advert;
-}
-/* .box7{
-    grid-area: advert;
-} */
-
-
-.box8{
-    grid-area: content3;
-}
-
-.box9{
-    grid-area: content4;
-}
-
-.box10{
-    grid-area: content5;
-}
-.hide-phone {
-    display: block;
-}
 }
